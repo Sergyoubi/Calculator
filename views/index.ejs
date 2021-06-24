@@ -2,40 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <%= title %> </title>
+    <title> <%= title %>  </title>
     <link rel="stylesheet" href="style.css">
-
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
 </head>
 <body>
-    <div class="header">
-        <p>THe Unconventional Calculator</p>
-    </div>
-
-    <div class="main">
+    <div class="w-screen h-screen bg-blue-100">
+        <div class="calculator bg-indigo-800 ">
+            <input type="text" class="calculator-screen bg-gray-600 text-4xl text-white text-right text-4xl" value="" disabled />
+            <div class="calculator-keys">
+              <button type="button" class="operator w-full h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="+">+</button>
+              <button type="button" class="operator w-full h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="-">-</button>
+              <button type="button" class="operator w-full h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="*">&times;</button>
+              <button type="button" class="operator w-full h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="/">&divide;</button>
           
-        <input type="number" id="bar" class="input1">    
-        <input type="number" id="bar" class="input2">
-    
-        <div class="btn-wrapper">
-            <button class="add-btn">+</button>
-            <button class="sub-btn">-</button>
-            <button class="mult-btn">X</button>
-            <button class="div-btn">/</button>
-            <button class="refresh-btn">C</button>
-        </div> 
-        
-     
-        <div class="result">
-            <p> </p>
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="7">7</button>
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="8">8</button>
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="9">9</button>
+          
+          
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="4">4</button>
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="5">5</button>
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="6">6</button>
+          
+          
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="1">1</button>
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="2">2</button>
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="3">3</button>
+          
+          
+              <button type="button" class="w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="0">0</button>
+              <button type="button" class="decimal w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value=".">.</button>
+              <button type="button" class="all-clear w-28 h-20 mx-auto bg-indigo-700 border border-transparent text-white text-2xl" value="all-clear">AC</button>
+          
+              <button type="button" class="equal-sign operator bg-indigo-500 border border-transparent text-white text-3xl" value="=">=</button>
+            </div>
         </div>
-        <h3 class="label">Result</h3>
-        
-        
-
     </div>
-
-    <script src ="index.js"></script>
-
 </body>
+<script src="script.js"></script>
 </html>
